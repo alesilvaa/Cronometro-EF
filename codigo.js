@@ -27,8 +27,7 @@ function toggleMenu2 (event) {
 menu.addEventListener('click', toggleMenu, false);
 menu2.addEventListener('click', toggleMenu2, false);
 //Solución con jQUery
-
-
+/////////////
 
 
 
@@ -155,8 +154,9 @@ $(".cajaCronometro").click(function () {
 
 // enable spacebar start/stop
 document.onkeydown = function (e) {
-    if (e.keyCode == 32)
+    if (e.keyCode == 32){
         document.getElementById("cajaCronometro").click();
+    }
 };
 
 
@@ -245,6 +245,7 @@ $("#metBtn").click(function () {
     document.getElementById('emom').style.display="none";
     document.getElementById('pomo').style.display="none";
     document.getElementById('met').style.display="block";
+    
 });
 
 

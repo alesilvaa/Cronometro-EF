@@ -47,26 +47,28 @@
                                 <div class="btns">
                                     <p>Time </p>
                                     <button class="mybtn btnL" id="slM">-</button>
-                                    <h4 id="sessL">0:00</h4>
+                                    <h4 id="sessL"> 0:00</h4>
                                     <button class="mybtn btnR" id="slP">+</button>
                                 </div>
                                 <div class="btns">
                                     <p>Break</p>
                                     <button class="mybtn btnL" id="blM">-</button>
-                                    <h4 id="breaL">0:00   </h4>
+                                    <h4 id="breaL">  0:00   </h4>
                                     <button class="mybtn btnR" id="blP">+</button>
                                 </div>
                                 <div class="btns">
                                     <p>Rounds</p>
                                     <button class="mybtn btnL" id="sM">-</button>
-                                    <h4 id="sessN">0</h4>
+                                    <h4 id="sessN">0  </h4>
                                     <button class="mybtn btnR" id="sP">+</button>
     
                                 </div>
                                 <!-- <button class="btn" id="rstbtn">reset</button> -->
                             </div>
                         </div>
-    
+                        <audio id="audio" controls>
+                            <source type="audio/ogg" src="Conteo EF final.ogg">
+                        </audio>
                     </li>
                 </ul>
             </nav>
@@ -113,7 +115,7 @@
                     <h2 id="label" class="display-2"></h2>
                     <h4 class="display-2" id="contador">1</h4>
                 </div>
-                <div class="cajaMod">
+                <div id="mod" class="cajaMod">
                     <div id="tabata" class="tabata">
                         TABATA
                     </div>
@@ -131,21 +133,24 @@
                 <div class="cajaCronometro" id="cajaCronometro">
                     <div id="inner_circle"></div>
                     <div class="timeInfo">
-                        <h1 id="timeR">0:00</h1>
+                        <h1 id="timeR" onmousedown="sonido.play()">0:00</h1>
                     </div>
                 </div>
     
             </div>
         </div>
     </div>
-   
-
-
     </div>
 
 
 
-    <!-- js -->
+        <!-- js -->
+    <script type="text/javascript">
+        var sonido = new audio();
+        sonido.src = "sonido.ogg";
+    </script>
+
+
     <script src="./codigo.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
