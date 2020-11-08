@@ -3,9 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-#audio {
+#miaudio {
     display:none
 }
+iframe{display:none;}
 
 .contenedor {
     width: 100%;
@@ -215,13 +216,13 @@
 
 
 .logo {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     left: 300px;
 }
 
 .logo img {
-    width: 400px;
-    height: 125px;
+    width: 390px;
+    height: 120px;
 }
 
 

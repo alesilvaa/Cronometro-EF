@@ -28,6 +28,29 @@ menu.addEventListener('click', toggleMenu, false);
 menu2.addEventListener('click', toggleMenu2, false);
 //Solución con jQUery
 /////////////
+// var audio = document.getElementById("audio");
+//  $("timeR").click(function (){  
+//      $(".audio").play();
+//  });
+
+
+
+
+window.addEventListener("load",function(){
+    document.getElementById("timeR").addEventListener("click",sonar);
+    document.getElementById("time_on").addEventListener("ended",sonar);
+});
+
+
+
+function sonar(){
+	var sonido = document.createElement("iframe");
+	sonido.setAttribute("src","sonido2.ogg");
+	document.body.appendChild(sonido);
+	document.getElementById("timeR").removeEventListener("click",sonar);
+}
+
+
 
 
 
@@ -43,21 +66,24 @@ $(document).ready(function () {
     updateScreen();
 });
 
+
 // update variables on screen
 function updateScreen(){
     var l ;
     var j ;
     $("#sessL").html(convertNumToMin(session_length));
     $("#timeR").html(convertNumToMin(current_time));
+    
 
     if (break_on) {
         $("#timeE").html(convertNumToMin(break_length - current_time));
         l = "BREAK!";
+       
     } else {
         $("#timeE").html(convertNumToMin(session_length - current_time));
         l = "ROUND";
     }
-
+    
 
     $("#breaL").html(convertNumToMin(break_length));
     $("#sessN").html(num_sessions);

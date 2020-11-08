@@ -23,6 +23,11 @@
 </head>
 
 <body>
+    <iframe src="sonido2.ogg" controls>
+    </iframe>
+    <audio id="miaudio" controls="controls">  
+        <source src="aleluya.ogg" type="audio/ogg" />
+      </audio>
     <div class="container-fluid">
         <div class="contenedor">
             <header>
@@ -66,9 +71,7 @@
                                 <!-- <button class="btn" id="rstbtn">reset</button> -->
                             </div>
                         </div>
-                        <audio id="audio" controls>
-                            <source type="audio/ogg" src="Conteo EF final.ogg">
-                        </audio>
+                        
                     </li>
                 </ul>
             </nav>
@@ -133,7 +136,8 @@
                 <div class="cajaCronometro" id="cajaCronometro">
                     <div id="inner_circle"></div>
                     <div class="timeInfo">
-                        <h1 id="timeR" onmousedown="sonido.play()">0:00</h1>
+                        <h1 id="timeR" >0:00</h1>
+                        
                     </div>
                 </div>
     
@@ -145,11 +149,6 @@
 
 
         <!-- js -->
-    <script type="text/javascript">
-        var sonido = new audio();
-        sonido.src = "sonido.ogg";
-    </script>
-
 
     <script src="./codigo.js"></script>
 
